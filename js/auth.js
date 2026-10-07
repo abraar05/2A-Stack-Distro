@@ -3,8 +3,8 @@
   'use strict';
   var SESSION = 'nexus_demo_session';
   var USERS = [
-    { email: 'admin@teamnexus.app', pass: 'Nexus@2026', name: 'Admin', role: 'Owner' },
-    { email: 'staff@teamnexus.app', pass: 'Nexus@2026', name: 'Staff', role: 'Viewer' }
+    { email: 'admin@amayastack.app', pass: 'Stack@2026', name: 'Admin', role: 'Owner' },
+    { email: 'analyst@amayastack.app', pass: 'Stack@2026', name: 'Staff', role: 'Viewer' }
   ];
   var gate = document.getElementById('login');
   if (!gate) return;
@@ -14,7 +14,7 @@
     var pass = (document.getElementById('login-pass') || {}).value || '';
     var err = document.getElementById('login-err');
     var u = USERS.filter(function (x) { return x.email === email.trim().toLowerCase() && x.pass === pass; })[0];
-    if (!u) { if (err) err.textContent = 'Invalid credentials. Try admin@teamnexus.app / Nexus@2026'; return; }
+    if (!u) { if (err) err.textContent = 'Invalid credentials. Try admin@amayastack.app / Stack@2026'; return; }
     localStorage.setItem(SESSION, JSON.stringify({ email: u.email, name: u.name, role: u.role, at: Date.now() }));
     gate.style.display = 'none';
     var crumb = document.getElementById('crumb');
