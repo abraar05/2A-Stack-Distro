@@ -1,7 +1,7 @@
 {
-  "name": "nexusdistro",
+  "name": "2a-stack-distro",
   "version": "1.0.0",
-  "description": "NexusDistro — wholesale ERP workspace.",
+  "description": "2A_Stack — wholesale ERP workspace.",
   "private": true,
   "scripts": {
     "start": "python3 -m http.server 8801 --bind 127.0.0.1",
