@@ -38,3 +38,8 @@ button,input{font:inherit}button{cursor:pointer}.app{display:flex;min-height:100
 .suite a:hover{background:var(--panel3);color:var(--text)}.suite .ico{width:16px;text-align:center;font-style:normal}
 
 @media(max-width:720px){.side .suite{display:none}}
+
+#login{position:fixed;inset:0;z-index:60;background:var(--bg);display:none;align-items:center;justify-content:center;padding:20px}
+.logincard{width:min(380px,100%);background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:var(--shadow,0 18px 60px rgba(0,0,0,.28))}
+.logincard input{display:block;width:100%;margin:10px 0;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--text);outline:none}
+#login-err{color:var(--bad,#ff6978);font-size:12px;min-height:16px;margin:4px 0}

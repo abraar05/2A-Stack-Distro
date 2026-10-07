@@ -6,6 +6,6 @@
   "scripts": {
     "start": "python3 -m http.server 8801 --bind 127.0.0.1",
     "serve": "npx --yes http-server -p 8801 -c-1",
-    "check": "node --check js/config.js && node --check js/app.js"
+    "check": "node --check js/auth.js && node --check js/config.js && node --check js/app.js"
   }
 }
