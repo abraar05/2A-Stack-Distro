@@ -43,3 +43,16 @@ button,input{font:inherit}button{cursor:pointer}.app{display:flex;min-height:100
 .logincard{width:min(380px,100%);background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:var(--shadow,0 18px 60px rgba(0,0,0,.28))}
 .logincard input{display:block;width:100%;margin:10px 0;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--text);outline:none}
 #login-err{color:var(--bad,#ff6978);font-size:12px;min-height:16px;margin:4px 0}
+
+/* === IMEI Control Center design system tokens === */
+:root{
+ --bg:#081015;--panel:#0d181f;--panel2:#101e25;--panel3:#12262f;--text:#e7eef2;--muted:#a5b8c0;
+ --line:#263a43;--accent:#e4383f;--accent2:#38bdf8;--good:#24a576;--warn:#fbbf24;--bad:#fb6474;
+ --radius:12px;--bg-deep:#040c10;
+}
+html[data-mode="light"]{--bg:#f4f7f9;--panel:#ffffff;--panel2:#f6fafb;--panel3:#eef4f6;--text:#0d181f;--muted:#5d6d75;--line:#dbe5e9}
+body{font-family:'Space Grotesk',Inter,ui-sans-serif,system-ui,sans-serif}
+.metric,.table td b,kbd{font-family:'DM Mono',ui-monospace,monospace}
+.kpi .metric{color:#e7eef2}
+.card,.btn{border-radius:12px}
+.hero p{color:var(--muted)}
