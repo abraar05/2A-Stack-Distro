@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" data-theme="graphite" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b10">
+<title>NexusDistro — Wholesale ERP</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="app">
+<aside class="side">
+ <div class="brand"><div class="logo">N</div><div><b>NEXUSDISTRO</b><small>Wholesale OS</small></div></div>
+ <div class="workspace"><div class="avatar"></div><div><strong>Ahana Trading</strong><small>Bangladesh · HQ</small></div><span class="chev">⌄</span></div>
+ <div class="navlabel">Workspace</div>
+ <nav class="nav">
+  <button class="active" data-page="home"><i class="ico">⌂</i><span>Overview</span></button>
+  <button data-page="sales"><i class="ico">↗</i><span>Sales</span><em class="badge">12</em></button>
+  <button data-page="inventory"><i class="ico">▦</i><span>Inventory</span></button>
+  <button data-page="purchasing"><i class="ico">⇣</i><span>Purchasing</span></button>
+  <button data-page="customers"><i class="ico">◎</i><span>Customers</span></button>
+  <button data-page="finance"><i class="ico">৳</i><span>Finance</span></button>
+  <button data-page="reports"><i class="ico">◴</i><span>Insights</span></button>
+ </nav>
+ <div class="navlabel">Workspace tools</div>
+ <nav class="nav">
+  <button onclick="openAI()"><i class="ico">✦</i><span>AI workspace</span></button>
+  <button data-page="settings"><i class="ico">⚙</i><span>Appearance</span></button>
+ </nav>
+ <div class="sidebottom"><button data-toast="Signed out (demo)">↪ Sign out</button></div>
+</aside>
+
+<main class="main">
+<header class="top"><div class="crumb" id="crumb">Overview</div><div class="search" onclick="openAI()">⌕ <span>Search anything, or ask AI…</span><kbd>⌘ K</kbd></div><div class="topactions"><button class="iconbtn" onclick="toggleMode()">◐</button><button class="iconbtn" onclick="openAI()">✦</button><button class="iconbtn" data-toast="No new notifications">♢</button></div><div class="profile"><div class="avatar"></div><div><b>Admin</b><small>Owner</small></div></div></header>
+
+<section class="content">
+<div id="home" class="page active">
+ <div class="hero"><div><h1>Good evening, Admin</h1><p>Here’s what needs your attention across the business today.</p></div><div class="actions"><button class="btn" onclick="openAI()">✦ Ask AI</button><button class="btn primary" data-toast="New sale draft opened">＋ New sale</button></div></div>
+ <div class="grid kpis">
+  <div class="card kpi"><div class="kpihead"><span>Net sales · today</span><span>↗</span></div><div class="metric">৳4.82M</div><div class="trend">+18.4% vs yesterday</div><div class="spark"><svg viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,34 20,29 40,31 60,21 80,24 100,12 120,17 140,9 160,14 180,5 200,8" fill="none" stroke="var(--accent)" stroke-width="3"/></svg></div></div>
+  <div class="card kpi"><div class="kpihead"><span>Gross margin</span><span>◎</span></div><div class="metric">12.8%</div><div class="trend">+1.6 pts this month</div><div class="spark"><svg viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,27 20,25 40,26 60,20 80,22 100,18 120,19 140,12 160,14 180,8 200,10" fill="none" stroke="var(--accent2)" stroke-width="3"/></svg></div></div>
+  <div class="card kpi"><div class="kpihead"><span>Inventory value</span><span>▦</span></div><div class="metric">৳38.4M</div><div class="trend">96.2% sell-through health</div><div class="spark"><svg viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,12 20,14 40,11 60,19 80,15 100,20 120,13 140,17 160,11 180,14 200,9" fill="none" stroke="var(--good)" stroke-width="3"/></svg></div></div>
+  <div class="card kpi"><div class="kpihead"><span>Receivables</span><span>!</span></div><div class="metric">৳18.7M</div><div class="trend" style="color:var(--warn)">৳2.1M due this week</div><div class="spark"><svg viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,8 20,11 40,13 60,18 80,16 100,23 120,20 140,27 160,24 180,31 200,29" fill="none" stroke="var(--warn)" stroke-width="3"/></svg></div></div>
+ </div>
+ <div class="grid mainrow">
+  <div class="card"><div class="sectionhead"><h3>Sales performance</h3><div><button class="btn" data-toast="Showing last 7 days">7D</button> <button class="btn" data-toast="Showing last 30 days">30D</button> <button class="btn" data-toast="Showing last 90 days">90D</button></div></div><div class="chart"><svg viewBox="0 0 800 240" preserveAspectRatio="none"><g stroke="var(--line)" stroke-width="1"><line x1="0" y1="30" x2="800" y2="30"/><line x1="0" y1="90" x2="800" y2="90"/><line x1="0" y1="150" x2="800" y2="150"/><line x1="0" y1="210" x2="800" y2="210"/></g><path d="M0 185 C55 168,80 174,125 145 S205 154,255 118 S335 132,385 94 S455 112,505 82 S585 102,630 65 S710 78,800 38" fill="none" stroke="var(--accent)" stroke-width="4"/><path d="M0 205 C65 198,100 208,150 184 S230 196,280 172 S365 180,420 153 S490 166,540 140 S620 148,675 124 S750 136,800 111" fill="none" stroke="var(--accent2)" stroke-width="2" stroke-dasharray="6 6"/></svg></div></div>
+  <div class="card ai"><div class="sectionhead"><div class="aihead"><div class="sparkle">✦</div><div><h2>Intelligence</h2><span class="muted" style="font-size:10px">Local AI · private</span></div></div><button class="btn" onclick="openAI()">Open</button></div><div style="padding:17px"><p>Your operation is healthy, but <b style="color:var(--text)">Redmi 15C 8/256 Blue</b> is trending 22% faster than forecast in Dhaka.</p><div class="insight"><b>Recommended action</b>Move 120 units from Chattogram to Dhaka before Thursday. Estimated margin protection: <strong>৳184K</strong>.</div><div class="insight"><b>Cash-flow watch</b> 4 customers account for 63% of overdue receivables.</div><div class="aiinput"><input placeholder="Ask about your business…" onclick="openAI()"><button class="send" onclick="openAI()">↑</button></div></div></div>
+ </div>
+ <div class="grid bottomrow">
+  <div class="card"><div class="sectionhead"><h3>Recent sales</h3><button class="btn" data-toast="Full sales ledger">View all →</button></div><div class="tablewrap"><table class="table"><thead><tr><th>Order</th><th>Customer</th><th>Product</th><th>Total</th><th>Status</th></tr></thead><tbody>
+  <tr><td><b>#SO-48291</b><br><span class="muted">2 min ago</span></td><td>Smart Zone BD</td><td><div class="product"><div class="phone"></div><span>Redmi 15C<br><span class="muted">8/256 · Blue × 48</span></span></div></td><td>৳1.24M</td><td><span class="pill good">Paid</span></td></tr>
+  <tr><td><b>#SO-48290</b><br><span class="muted">8 min ago</span></td><td>Mobile Point</td><td><div class="product"><div class="phone"></div><span>Note 15 4G<br><span class="muted">8/256 · Black × 30</span></span></div></td><td>৳982K</td><td><span class="pill warn">Pending</span></td></tr>
+  <tr><td><b>#SO-48287</b><br><span class="muted">21 min ago</span></td><td>Gadget Hub</td><td><div class="product"><div class="phone"></div><span>Redmi 14C<br><span class="muted">8/256 · Green × 24</span></span></div></td><td>৳512K</td><td><span class="pill good">Paid</span></td></tr>
+ </tbody></table></div></div>
+  <div class="card"><div class="sectionhead"><h3>Warehouse health</h3><button class="btn" data-toast="Warehouse map">Map</button></div><div class="warehouse"><div class="whrow"><span>Chattogram HQ</span><b>92%</b></div><div class="bar"><i style="width:92%"></i></div><div class="whrow" style="margin-top:18px"><span>Dhaka Hub</span><b>78%</b></div><div class="bar"><i style="width:78%"></i></div><div class="whrow" style="margin-top:18px"><span>Sylhet Depot</span><b>61%</b></div><div class="bar"><i style="width:61%"></i></div><p class="muted" style="font-size:11px;margin-top:18px">2 inbound shipments · 37 low-stock SKUs</p></div></div>
+  <div class="card"><div class="sectionhead"><h3>Attention</h3><span class="pill bad">5 items</span></div><div style="padding:8px 15px"><p style="font-size:12px">● <b>৳840K</b> overdue from Rahman Telecom <span class="muted">· 2d</span></p><p style="font-size:12px">● 37 SKUs below safety stock <span class="muted">· now</span></p><p style="font-size:12px">● PO-1982 shipment delayed <span class="muted">· 6h</span></p><button class="btn" style="width:100%" data-toast="Review queue opened">Review all</button></div></div>
+ </div>
+</div>
+
+<div id="sales" class="page"><div class="hero"><div><h1>Sales workspace</h1><p>Orders, pricing, dispatch and customer credit in one calm workflow.</p></div><button class="btn primary" data-toast="New order draft opened">＋ New order</button></div><div class="grid modulegrid"><div class="card module"><div class="bigico">↗</div><h3>Order desk</h3><p>Fast entry with intelligent SKU search, customer-specific pricing and instant credit checks.</p><button class="btn" data-toast="Order desk opened">Open desk →</button></div><div class="card module"><div class="bigico">▤</div><h3>Dispatch queue</h3><p>Pick, pack and deliver with barcode/IMEI-aware fulfillment states.</p><button class="btn" data-toast="Dispatch queue opened">12 ready →</button></div><div class="card module"><div class="bigico">৳</div><h3>Pricing intelligence</h3><p>See live margin, market price variance and recommended wholesale price.</p><button class="btn" data-toast="Pricing intelligence opened">Review →</button></div></div></div>
+
+<div id="inventory" class="page"><div class="hero"><div><h1>Inventory control</h1><p>IMEI-level visibility without spreadsheet fatigue.</p></div><div class="actions"><button class="btn" data-toast="Import opened">Import</button><button class="btn primary" data-toast="Receiving flow opened">＋ Receive stock</button></div></div><div class="card"><div class="sectionhead"><h3>Live stock</h3><div class="actions"><button class="btn" data-toast="Warehouse filter">All warehouses</button><button class="btn" data-toast="Filter options">Filter</button></div></div><div class="tablewrap"><table class="table"><thead><tr><th>Device</th><th>SKU</th><th>Available</th><th>Reserved</th><th>Value</th><th>Health</th></tr></thead><tbody><tr><td><div class="product"><div class="phone"></div><b>Redmi 15C</b></div></td><td>15C-8256-BLU</td><td>1,248</td><td>180</td><td>৳24.1M</td><td><span class="pill good">Healthy</span></td></tr><tr><td><div class="product"><div class="phone"></div><b>Redmi Note 15 4G</b></div></td><td>RN15-8256-BLK</td><td>420</td><td>96</td><td>৳9.8M</td><td><span class="pill warn">Watch</span></td></tr><tr><td><div class="product"><div class="phone"></div><b>Redmi 14C</b></div></td><td>14C-8256-GRN</td><td>72</td><td>31</td><td>৳1.4M</td><td><span class="pill bad">Low stock</span></td></tr></tbody></table></div></div></div>
+
+<div id="purchasing" class="page"><div class="hero"><div><h1>Purchasing</h1><p>Supplier performance, inbound stock and landed-cost intelligence.</p></div><button class="btn primary" data-toast="Purchase order draft opened">＋ New purchase order</button></div><div class="grid modulegrid"><div class="card module"><div class="bigico">⇣</div><h3>Inbound control tower</h3><p>Track purchase orders, containers, ETA changes and receiving exceptions.</p><button class="btn" data-toast="Control tower opened">Open tower →</button></div><div class="card module"><div class="bigico">◈</div><h3>Supplier scorecards</h3><p>Compare fill rate, lead time, price variance and claims by supplier.</p><button class="btn" data-toast="Supplier scorecards opened">View scorecards →</button></div><div class="card module"><div class="bigico">✦</div><h3>Buy recommendation</h3><p>AI estimates demand and suggests the next order quantity by warehouse.</p><button class="btn" onclick="openAI()">Ask AI →</button></div></div></div>
+
+<div id="customers" class="page"><div class="hero"><div><h1>Customer intelligence</h1><p>Credit, lifetime value, buying patterns and relationship history.</p></div><button class="btn primary" data-toast="Customer form opened">＋ Add customer</button></div><div class="card"><div class="sectionhead"><h3>Top accounts</h3><button class="btn" data-toast="Export started">Export</button></div><div class="tablewrap"><table class="table"><thead><tr><th>Customer</th><th>Revenue YTD</th><th>Outstanding</th><th>Last order</th><th>Risk</th></tr></thead><tbody><tr><td><b>Smart Zone BD</b><br><span class="muted">Dhaka</span></td><td>৳18.2M</td><td>৳420K</td><td>2 min ago</td><td><span class="pill good">Low</span></td></tr><tr><td><b>Mobile Point</b><br><span class="muted">Chattogram</span></td><td>৳12.7M</td><td>৳1.2M</td><td>8 min ago</td><td><span class="pill warn">Medium</span></td></tr></tbody></table></div></div></div>
+
+<div id="finance" class="page"><div class="hero"><div><h1>Finance</h1><p>A decision layer over receivables, payables, cash and margin.</p></div><button class="btn primary" data-toast="Transaction form opened">＋ Record transaction</button></div><div class="grid modulegrid"><div class="card module"><div class="bigico">৳</div><h3>Cash position</h3><p>৳12.8M available · ৳4.2M expected in 7 days.</p></div><div class="card module"><div class="bigico">↗</div><h3>Receivables</h3><p>৳18.7M outstanding · ৳2.1M due this week.</p></div><div class="card module"><div class="bigico">↘</div><h3>Payables</h3><p>৳9.4M due · 83% within agreed terms.</p></div></div></div>
+
+<div id="reports" class="page"><div class="hero"><div><h1>Insights</h1><p>From reporting to decisions—ask questions in plain language.</p></div><button class="btn primary" onclick="openAI()">✦ Explore with AI</button></div><div class="grid modulegrid"><div class="card module"><div class="bigico">⌁</div><h3>Executive pulse</h3><p>Revenue, margin, inventory velocity and cash flow summarized for leadership.</p><button class="btn" data-toast="Executive pulse opened">Open →</button></div><div class="card module"><div class="bigico">▥</div><h3>Margin explorer</h3><p>Drill from company → warehouse → SKU → invoice without leaving the page.</p><button class="btn" data-toast="Margin explorer opened">Explore →</button></div><div class="card module"><div class="bigico">◴</div><h3>Demand forecast</h3><p>AI forecast with confidence bands and explainable drivers.</p><button class="btn" data-toast="Demand forecast opened">Open forecast →</button></div></div></div>
+
+<div id="settings" class="page"><div class="hero"><div><h1>Appearance</h1><p>Make the workspace yours. Theme changes apply instantly.</p></div></div><div class="grid settings"><div class="card settingsnav" style="padding:10px"><button class="active">Themes</button><button data-toast="Density settings">Density</button><button data-toast="Navigation settings">Navigation</button><button data-toast="Accessibility settings">Accessibility</button><button data-toast="AI preferences">AI preferences</button></div><div class="card" style="padding:20px"><h3 style="margin-top:0">Theme studio</h3><p class="muted">Choose a base theme and accent. The product uses semantic design tokens so every surface, chart and state stays consistent.</p><div class="themegrid"><div class="theme"><button class="tgraphite" onclick="theme('graphite')"></button><span>Graphite / Indigo</span></div><div class="theme"><button class="tviolet" onclick="theme('violet')"></button><span>Midnight / Violet</span></div><div class="theme"><button class="temerald" onclick="theme('emerald')"></button><span>Obsidian / Emerald</span></div><div class="theme"><button class="tocean" onclick="theme('ocean')"></button><span>Deep Ocean</span></div></div><div style="margin-top:22px"><button class="btn" onclick="toggleMode()">Toggle light / dark</button></div></div></div></div>
+
+<div id="generated" class="page"></div>
+</section>
+</main>
+</div>
+
+<div class="drawer" id="drawer" onclick="if(event.target===this)closeAI()"><div class="drawerpanel"><div class="drawerhead"><div><div class="muted" style="font-size:10px;text-transform:uppercase;letter-spacing:.1em">Local intelligence</div><h2>Business Copilot</h2></div><button class="iconbtn" onclick="closeAI()">×</button></div><p class="muted">Private, context-aware assistance over sales, inventory, finance and operations. AI is embedded into the workflow—not treated as a separate app.</p><div class="aiinput" style="margin-top:20px"><input id="q" placeholder="Ask: “What should I reorder this week?”"><button class="send" onclick="answer()">↑</button></div><div id="answer" class="airesponse">Try asking about sales trends, stock transfers, customer risk, purchasing or cash flow.</div><div class="insight" style="margin-top:18px"><b>Suggested</b>“Which SKUs are likely to stock out in the next 14 days?”</div><div class="insight"><b>Suggested</b>“Find customers whose payment behaviour changed this month.”</div></div></div>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
